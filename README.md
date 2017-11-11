@@ -1,2 +1,4 @@
-# docker-sirannon
-Dockerfile for building the Sirannon media streaming server from source
+# dockerfiles
+
+Various Dockerfiles related to video-on-demand servers and clients. Most containers hosted on Dockerhub.
+

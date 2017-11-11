@@ -1,3 +1,4 @@
+# antongulenko/sirannon-src
 FROM ubuntu:14.04
 
 #
@@ -50,11 +51,3 @@ RUN sh ./configure --enable-debug=3 --disable-vaapi --disable-ffmpeg --disable-f
 WORKDIR /opt/sirannon/libs/jrtplib-3.9.1
 RUN cmake --disable-jthread --disable-memory . && make
 
-#
-# ========== Configure and build the Sirannon server
-#
-
-WORKDIR /opt/sirannon
-RUN autoreconf -i && ./configure && make && make install
-
-# ./configure --without-boost-filesystem --without-boost-regex
